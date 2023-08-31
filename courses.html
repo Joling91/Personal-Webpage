@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Yuling Guo  -->
+<!-- courses.html -->
+<!-- 2023-06-26 -->
+<!-- This page displays the course list with the function of the search bar, course filter and sorting -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Yuling Guo">
+  <meta name="description" content="Assignment01">
+  <meta name="keywords" content="Assignment01,cst8285,htmlcode">
+  <title>Yuling Guo's personal website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="./courses.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Yuling Guo's personal website</h1>
+    <img id="background" src="./image/kitty.jpg" alt="">
+    <img src="./image/Me.jpg" alt="Me">
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="courses.html">Courses</a>
+  </nav>
+
+  <main>
+    <section id="courses">
+      <h2>My Courses</h2>
+
+      <!-- Search bar -->
+      <input id="searchInput" type="search" onkeyup="searchCourse()" placeholder="Search course">
+
+      <!-- Filter by level -->
+      <!-- Filter by level -->
+      <label for="levelFilter">Filter by Level:</label>
+      <select id="levelFilter" onchange="filterByLevel()">
+        <option value="All Levels">All Levels</option>
+        <option value="Level 1">Level 1</option>
+        <option value="Level 2">Level 2</option>
+      </select>
+
+      <!-- Sort by level -->
+      <label for="levelSort">Sort by Level:</label>
+      <select id="levelSort" onchange="sortByLevel()">
+        <option value="asc">Lowest to Highest</option>
+        <option value="desc">Highest to Lowest</option>
+      </select>
+
+      <!-- Course list -->
+      <ul id="courseList">
+        <li>
+          <img src="./image/CST8300.jpg" alt="Achieving Success in Changing Environments">
+
+          <h3>Achieving Success in Changing Environments</h3>
+          <p class="level">Level 1</p>
+          <p>Course Code: CST8300<br>
+            Description: Students explore the possibilities ahead, assess their own
+            aptitudes and strengths, and apply critical thinking and decision-making tools to help resolve some of the
+            important issues in our complex society with its competing interests.</p>
+
+        </li>
+        <li>
+          <img src="./image/CST8101.jpg" alt="Computer Essentials">
+          <div>
+            <h3>Computer Essentials</h3>
+            <p class="level">Level 1</p>
+            <p>Course Code: CST8101<br>
+              Description: Computer Essentials covers computer software, hardware, and
+              laptop management, including configuration, troubleshooting, backups, virus protection, and file
+              management
+              using Windows.</p>
+          </div>
+        </li>
+        <li>
+          <img src="./image/DatabaseSystems.jpg" alt="Introduction to Database">
+          <h3>Introduction to Database</h3>
+          <p class="level">Level 1</p>
+          <p>Course Code: CST8215<br>
+            Description: Introduction to Database teaches relational database design
+            using ERDs and SQL for creating, modifying, and querying secure and adaptable databases.</p>
+        </li>
+        <li>
+          <img src="./image/BigJava.jpg" alt="Introduction to Computer Programming">
+          <h3>Introduction to Computer Programming</h3>
+          <p class="level">Level 1</p>
+          <p>Course Code: CST8116<br>
+            Description: Introduction to Computer Programming provides a foundation in
+            logic, problem-solving, and Java programming using algorithms, flowcharts, and UML Class Diagrams.</p>
+        </li>
+        <li>
+          <img src="./image/MAT8001C.jpg" alt="Technical Mathematics for Computer Science">
+          <h3>Technical Mathematics for Computer Science</h3>
+          <p class="level">Level 1</p>
+          <p>Course Code: MAT8001C<br>
+            Description: Technical Mathematics for Computer Science covers algebraic and
+            transcendental functions, equation solving, linear systems, and graphing with a focus on computer number
+            systems and Boolean algebra.</p>
+        </li>
+        <li>
+          <img src="./image/DatabaseSystems.jpg" alt="Database Systems">
+          <h3>Database Systems</h3>
+          <p class="level">Level 2</p>
+          <p>Course Code: CST2355<br>
+            Description: Database Systems introduces the concepts of managing and
+            organizing data through data modeling, normalization, database design, and the use of DBMS for data
+            integrity and efficiency.
+          </p>
+        </li>
+        <li>
+          <img src="./image/DinnerParty.jpg" alt="Dinner Party">
+          <h3>Dinner Party</h3>
+          <p class="level">Level 2</p>
+          <p>Course Code: HOS2288<br>
+            Description: The Dinner Party explores event planning and hosting, covering
+            menu design, table setting, decor, guest management, event coordination, budgeting, and etiquette.
+          </p>
+        </li>
+        <li>
+          <img src="./image/CST8284-BigJava.jpg" alt="Object-Oriented Programming (Java)">
+          <h3>Object-Oriented Programming (Java)</h3>
+          <p class="level">Level 2</p>
+          <p>Course Code: CST8284<br>
+            Description: Object-Oriented Programming (Java) teaches object-oriented programming
+            principles using Java, including classes, objects, inheritance, polymorphism, and encapsulation.
+          </p>
+        </li>
+        <li>
+          <img src="./image/Linux.jpg" alt="Operating Systems Fund (Gnu/Linux)">
+          <h3>Operating Systems Fund (Gnu/Linux)</h3>
+          <p class="level">Level 2</p>
+          <p>Course Code: CST8102<br>
+            Description: Operating Systems Fundamentals (Gnu/Linux) explores operating
+            systems, focusing on GNU/Linux, covering process management, memory management, file systems, shell
+            scripting,
+            system administration, and troubleshooting.
+          </p>
+        </li>
+        <li>
+          <img src="./image/Communication.png" alt="Technical Communication for Engineering Technologies">
+          <h3>Technical Communication for Engineering Technologies</h3>
+          <p class="level">Level 2</p>
+          <p>Course Code: ENL2019T<br>
+            Description: It emphasizes effective communication skills in writing,
+            speaking, reading, listening, information retrieval, and technology usage for professional communication.
+          </p>
+        </li>
+        <li>
+          <img src="./image/CST8285-WebProgramming.jpg" alt="Web Programming">
+          <h3>Web Programming</h3>
+          <p class="level">Level 2</p>
+          <p>Course Code: CST8285<br>
+            Description: Web Programming focuses on dynamic website development using
+            HTML, CSS, JavaScript, server-side scripting, and database integration for user input, data validation, and
+            security.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023-06-26 Yuling Guo</p>
+  </footer>
+</body>
+
+</html>
